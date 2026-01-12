@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library 2</title>
-      <link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Main</title>
+    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/6a11f99eb4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
     <script src="books.js"></script>
-</head>
-<body>
-    <section id="landing">
-     <nav>
+  </head>
+
+  <body id="books__body">
+    <section>
+      <nav>
         <div class="nav__container">
           <img class="logo" src="./assets/Library.svg" />
           <ul class="nav__links">
@@ -54,29 +56,32 @@
           </div>
         </div>
       </nav>
-      </header>
+    </section>
+
     <main id="books__main">
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="books__header">
-                    <h2 class="section__title books__header__title">
-                        All <span class="blue">Books</span>
-                    </h2>
-                    <select id="filter">
-                        <option value="" disabled selected>Sort</option>
-                        <option value="LOW_TO_HIGH">Price: Low to High</option>
-                        <option value="HIGH_TO_LOW">Price: High to Low</option>
-                        <option value="RATING">Rating</option>
-                    </select>
-                    </div>
-                    <div class="books">
-                    </div>
-                </div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="books__header">
+            <h2 class="section__title books__header--title">
+              All <span class="blue">Books</span>
+            </h2>
+            <select id="filter" onchange="filterBooks(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="LOW_TO_HIGH">Price: Low to High</option>
+                <option value="HIGH_TO_LOW">Price: High to Low</option>
+                <option value="RATING">Rating</option>
+            </select>
             </div>
-        </section>
+            <div class="books">
+
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-     <footer>
+
+    <footer>
       <div class="container">
         <div class="row row__column">
           <a href="#">
@@ -94,5 +99,5 @@
         </div>
       </div>
     </footer>
-</body>
+  </body>
 </html>
